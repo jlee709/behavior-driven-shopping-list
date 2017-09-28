@@ -4,7 +4,50 @@ console.log('test file linked');
 
 const expect = chai.expect;
 let shopping_list;
+let shopping_list_item;
 
+
+// shopping list Item
+
+
+
+// ShoppingListItem is a class
+// ShoppingListItem has a property named name
+// ShoppingListItem has a property named description
+
+// ShoppingListItem has a property named is_done
+// ShoppingListItem has a constructor method that accepts 2 arguments, name and description
+// the constructor method sets the new instances name and description properties using the arguments passed in
+// ShoppingListItem has a method named check
+// calling the instance's check method will set it's is_done property to true
+// ShoppingListItem has a method named uncheck
+// calling the instance's uncheck method will set it's is_done property to false
+// ShoppingListItem has a method named render
+
+beforeEach(function(){
+  shopping_list_item = new ShoppingListItem;
+
+});
+
+describe('shoppingListItem', function(){
+  
+  it('should be a class', function(){
+    expect(shopping_list_item).to.be.a("fucntion");
+  });
+
+  it('should have a property of name',function(){
+    expect(shopping_list_item).to.have.property('name');
+  });
+
+  it('should have a property called description', function(){
+    expect(shopping_list_item).to.have.property('description');
+  });
+
+   it('should have a property called is_done', function(){
+    expect(shopping_list_item).to.have.property('is_done');
+  });
+
+});
 
 
 
@@ -12,9 +55,10 @@ let shopping_list;
 // - ShoppingList is a class
 // - ShoppingList has a property named `items`
 // - ShoppingList has a constructor method that initializes `items` as an empty Array
-
 // - ShoppingList has a method named `addItem` that accepts a single ShoppingListItem argument
 //   - invoking the `addItem` method by passing in a ShoppingListItem object should add that object to the `items` array
+
+
 //   - invoking the `addItem` method by passing in anything else that is not a ShoppingListItem object should immediately throw an error
 // - ShoppingList has a method named `removeItem` that accepts a single ShoppingListItem argument
 //   - invoking the `removeItem` method by passing in a ShoppingListItem object (that exists in the `items` array) should remove that object from the `items` array
@@ -24,11 +68,13 @@ let shopping_list;
 //   - calling the instance's `render` method will concatenate the result of calling `render()` on each item in this object's `items` array, wrapping it in a `<ul>` tags, and returning an html formatted string. ex: `<ul>...[all the li elements from ShoppingListItem.render()]...</ul>`
 
 
+
+// shopping list
 beforeEach(function(){
   shopping_list = new ShoppingList;
 });
 
-describe('shoppingListItem', function() {
+describe('shoppingList', function() {
   it('should be a class', function() {
     expect(shopping_list).to.be.a("function");
   });
@@ -43,6 +89,18 @@ describe('shoppingListItem', function() {
 
   it('should have a property of addItem', function(){
     expect(shopping_list).to.have.property("addItem");
+  });
+
+  it('should append an item to the array', function(){
+    expect(shopping_list, 'addItem').to.have.property([]);
+    addItem();
+    expect(shoppingList).to.be.an('array').that.contains.something.like(['addItem']);
+  });
+
+//   - invoking the `addItem` method by passing in anything else that is not a 
+// ShoppingListItem object should immediately throw an error
+  it('should not take in anything other than an array obj', function(){
+    expect(shopping_list.addItem).to.throw("new error");
   });
 
 });

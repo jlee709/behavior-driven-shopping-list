@@ -19,6 +19,6 @@ console.log("shopping list item linked ");
 
 // hint: Use ES6 [string templates](http://tc39wiki.calculist.org/es6/template-strings/) for your render method
 
-function ShoppingListItem(name, description){
-  console.log("im a class");
+function ShoppingListItem(){
+
 }
