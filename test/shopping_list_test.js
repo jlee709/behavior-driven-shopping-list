@@ -6,9 +6,7 @@ const expect = chai.expect;
 let shopping_list;
 let shopping_list_item;
 
-
 // shopping list Item
-
 
 //=================================================
 // ShoppingListItem is a class
@@ -32,12 +30,10 @@ let shopping_list_item;
 //NOTES=====================================$$$$$$
 
 
-
-
 describe('shoppingListItem', function(){
   beforeEach(function(){
   //object 
-    shopping_list_item  = new ShoppingListItem(); //function
+    shopping_list_item  = new ShoppingListItem("tv", "high res"); //function
   });
 
   it('should be a class', function(){
@@ -57,8 +53,8 @@ describe('shoppingListItem', function(){
   });   
 
    it('should take 2 arguments: name and description', function(){
-    expect(shopping_list_item, 'name').to.have.param('name').a('string').not.empty;
-    expect(shopping_list_item, 'description').to.have.param('description').a('string').not.empty;  
+    expect(shopping_list_item.name).to.equal("tv");
+    expect(shopping_list_item.description).to.equal("high res");  
   });
 
 });
@@ -84,7 +80,9 @@ describe('shoppingListItem', function(){
 
 // shopping list
 beforeEach(function(){
-  shopping_list = new ShoppingList;
+
+  //object
+  shopping_list = new ShoppingList;//function
 });
 
 describe('shoppingList', function() {
