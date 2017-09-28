@@ -10,11 +10,10 @@ let shopping_list_item;
 // shopping list Item
 
 
-
+//=================================================
 // ShoppingListItem is a class
 // ShoppingListItem has a property named name
 // ShoppingListItem has a property named description
-
 // ShoppingListItem has a property named is_done
 // ShoppingListItem has a constructor method that accepts 2 arguments, name and description
 // the constructor method sets the new instances name and description properties using the arguments passed in
@@ -23,16 +22,25 @@ let shopping_list_item;
 // ShoppingListItem has a method named uncheck
 // calling the instance's uncheck method will set it's is_done property to false
 // ShoppingListItem has a method named render
+//==================================================
+
+//NOTES=====================================$$$$$$
+      // invokes function as an object. class 
+      // definitions always functions and returns objects
+      // class declaration is a function 
+      // class insstance is an object 
+//NOTES=====================================$$$$$$
+
 
 beforeEach(function(){
-  shopping_list_item = new ShoppingListItem;
-
+  //object 
+  shopping_list_item  = new ShoppingListItem(); //function
 });
 
 describe('shoppingListItem', function(){
   
   it('should be a class', function(){
-    expect(shopping_list_item).to.be.a("fucntion");
+    expect(ShoppingListItem).to.be.a("function");
   });
 
   it('should have a property of name',function(){
@@ -48,7 +56,6 @@ describe('shoppingListItem', function(){
   });
 
 });
-
 
 
 
