@@ -32,13 +32,14 @@ let shopping_list_item;
 //NOTES=====================================$$$$$$
 
 
-beforeEach(function(){
-  //object 
-  shopping_list_item  = new ShoppingListItem(); //function
-});
+
 
 describe('shoppingListItem', function(){
-  
+  beforeEach(function(){
+  //object 
+    shopping_list_item  = new ShoppingListItem(); //function
+  });
+
   it('should be a class', function(){
     expect(ShoppingListItem).to.be.a("function");
   });
@@ -53,6 +54,11 @@ describe('shoppingListItem', function(){
 
    it('should have a property called is_done', function(){
     expect(shopping_list_item).to.have.property('is_done');
+  });   
+
+   it('should take 2 arguments: name and description', function(){
+    expect(shopping_list_item, 'name').to.have.param('name').a('string').not.empty;
+    expect(shopping_list_item, 'description').to.have.param('description').a('string').not.empty;  
   });
 
 });
