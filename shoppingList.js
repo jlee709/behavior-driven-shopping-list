@@ -2,9 +2,13 @@ console.log("shopping list linked");
 
 
 class ShoppingList {
-   addItem(item){
-    itemList = item;
-    item.push(item);  
+  constructor(){
+    this.items = [];
+  }
+
+  addItem(shoppingListItem){
+    this.items.push(shoppingListItem);
   }
 }
 
+// shopping list

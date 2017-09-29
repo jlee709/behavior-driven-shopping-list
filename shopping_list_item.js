@@ -21,11 +21,11 @@ console.log("shopping list item linked ");
 // hint: Use ES6 [string templates](http://tc39wiki.calculist.org/es6/template-strings/) for your render method
 
 class ShoppingListItem{
-constructor(name, description) {
-  this.name = name;
-  this.description = description;
-  this.is_done = false;
-}
+  constructor(name, description) {
+    this.name = name;
+    this.description = description;
+    this.is_done = false;
+  }
   check(){
     this.is_done = true;
   }

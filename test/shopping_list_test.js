@@ -27,8 +27,7 @@ let shopping_list_item;
       // definitions always functions and returns objects
       // class declaration is a function 
       // class insstance is an object 
-//NOTES=====================================$$$$$$
-
+//NOTES=====================================$$$$$$  
 
 describe('shoppingListItem', function(){
   beforeEach(function(){
@@ -86,10 +85,14 @@ describe('shoppingListItem', function(){
     expect(string).to.include('<span>');
   });
 
-});
 
 
 
+
+
+  // SHOPPING LIST 
+
+  
 // - ShoppingList is a class
 // - ShoppingList has a property named `items`
 // - ShoppingList has a constructor method that initializes `items` as an empty Array
@@ -105,46 +108,44 @@ describe('shoppingListItem', function(){
 // - ShoppingList has a method named `render`
 //   - calling the instance's `render` method will concatenate the result of calling `render()` on each item in this object's `items` array, wrapping it in a `<ul>` tags, and returning an html formatted string. ex: `<ul>...[all the li elements from ShoppingListItem.render()]...</ul>`
 
+  describe('ShoppingList', function(){
+  
+    beforeEach(function(){
+    //object
+      shopping_list = new ShoppingList();//function
+    });
 
+    it('should be a class', function() {
+      expect(ShoppingList).to.be.a("function");
+    });
 
-// shopping list
+    it('should have a property of name', function(){
+      expect(shopping_list).to.have.property("items");
+    });
 
-describe('ShoppingList', function() {
-  beforeEach(function(){
-  //object
-    shopping_list = new ShoppingList;//function
-  });
+    it('should initialize items as empty array', function(){
+      expect(shopping_list, "items").to.be.a('array');
+    });
 
-  it('should be a class', function() {
-    expect(shopping_alist).to.be.a("function");
-  });
+    it('should have a property of addItem', function(){
+      expect(shopping_list).to.have.property("addItem");
+    });
 
-  it('should have a property of name', function(){
-    expect(ShoppingList).to.have.property("items");
-  });
+    it('should append an item to the array', function(){
+      expect(shopping_list, 'addItem').to.have.property([]);
+      addItem();
+      expect(shoppingList).to.be.an('array').that.contains.something.like(['addItem']);
+    });
 
-  it('should initialize items as empty array', function(){
-    expect(ShoppingList, "items").to.be.a('array');
-  });
+  //   - invoking the `addItem` method by passing in anything else that is not a 
+  // ShoppingListItem object should immediately throw an error
+    it('should not take in anything other than an array obj', function(){
+      expect(shopping_list.addItem).to.throw("new error");
+    });
 
-  it('should have a property of addItem', function(){
-    expect(shopping_list).to.have.property("addItem");
-  });
-
-  it('should append an item to the array', function(){
-    expect(shopping_list, 'addItem').to.have.property([]);
-    addItem();
-    expect(shoppingList).to.be.an('array').that.contains.something.like(['addItem']);
-  });
-
-//   - invoking the `addItem` method by passing in anything else that is not a 
-// ShoppingListItem object should immediately throw an error
-  it('should not take in anything other than an array obj', function(){
-    expect(shopping_list.addItem).to.throw("new error");
   });
 
 });
-
 
 
 
