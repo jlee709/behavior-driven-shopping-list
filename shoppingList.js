@@ -8,7 +8,9 @@ class ShoppingList {
 
   addItem(shoppingListItem){
     this.items.push(shoppingListItem);
-  }
-}
+  }   
 
-// shopping list
+  items(){
+    ShoppingList = shoppingListItem;
+  }
+}     // shopping list

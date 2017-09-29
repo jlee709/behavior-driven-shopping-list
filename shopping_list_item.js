@@ -33,7 +33,7 @@ class ShoppingListItem{
   uncheck(){
     this.is_done = false;
   }
-
+// change this to `${}` formatt
   render() {
     let string = '<li class=completed_' + this.is_done + '><span>' + this.name + '</span> <span>' + this.description + '</span></li>';
     return string;
