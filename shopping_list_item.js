@@ -34,8 +34,9 @@ constructor(name, description) {
     this.is_done = false;
   }
 
-  render(string){
-    string =+ '<li>string</li>';
+  render() {
+    let string = '<li class=completed_' + this.is_done + '><span>' + this.name + '</span> <span>' + this.description + '</span></li>';
+    return string;
   }
 }
 

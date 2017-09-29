@@ -76,9 +76,15 @@ describe('shoppingListItem', function(){
        expect(shopping_list_item.is_done).to.deep.equal(false);
    });
 
-   it('should render shopping list', function(){
-    // render method
+   it('should be a function' , function() {
+         expect(shopping_list_item.render).to.be.a("function");
+
    });
+
+   it('should render shopping list', function(){
+    let string = shopping_list_item.render();
+    expect(string).to.include('<span>');
+  });
 
 });
 

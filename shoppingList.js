@@ -1,11 +1,10 @@
 console.log("shopping list linked");
 
 
-function ShoppingList(){
- }
-
-function addItem(item){
+class ShoppingList {
+   addItem(item){
     itemList = item;
-    item.push(item);
-    
+    item.push(item);  
+  }
 }
+
