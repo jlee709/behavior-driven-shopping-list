@@ -8,20 +8,6 @@ let shopping_list_item;
 
 // shopping list Item
 
-//=================================================
-// ShoppingListItem is a class - check
-// ShoppingListItem has a property named name - check
-// ShoppingListItem has a property named description - check
-// ShoppingListItem has a property named is_done - check
-// ShoppingListItem has a constructor method that accepts 2 arguments, name and description
-// the constructor method sets the new instances name and description properties using the arguments passed in- check
-// ShoppingListItem has a method named check
-// calling the instance's check method will set it's is_done property to true
-// ShoppingListItem has a method named uncheck
-// calling the instance's uncheck method will set it's is_done property to false
-// ShoppingListItem has a method named render
-//==================================================
-
 //NOTES=====================================$$$$$$
       // invokes function as an object. class 
       // definitions always functions and returns objects
@@ -100,36 +86,31 @@ describe('ShoppingList', function(){
   });
 
   it('should have property items', function(){
-  expect(shoppingList.items).to.exist;
+  expect(shopping_list).to.have.property('items');
 });
 
 
 describe('should have method named addItem', function(){
-
 
   it('should have a property of addItem', function(){
     expect(shopping_list).to.have.property("addItem");
   });
 
    it('should initialize items as empty array', function(){
-    addItem();
+    items();
     expect(shopping_list.items).to.deep.equal([]);
   });
 
 
   it('should append an item to the array', function(){
     shopping_list.addItem(shopping_list_item);
-    expect(shoppingList.items).to.include(shoppingList);
-
+    expect(shopping_list.items).to.include(shoppingList);
   });
-});
+}); //end of method addItem describe
     
-
   it('should not take in anything other than an array obj', function(){
     expect(shopping_list.addItem).to.throw("new error");
   });
-
-
 });
 
 

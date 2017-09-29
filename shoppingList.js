@@ -11,6 +11,10 @@ class ShoppingList {
   }   
 
   items(){
-    ShoppingList = shoppingListItem;
+    ShoppingList = [];
   }
+
+  remove(){
+
+  } 
 }     // shopping list
