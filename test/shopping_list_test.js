@@ -9,12 +9,12 @@ let shopping_list_item;
 // shopping list Item
 
 //=================================================
-// ShoppingListItem is a class
-// ShoppingListItem has a property named name
-// ShoppingListItem has a property named description
-// ShoppingListItem has a property named is_done
+// ShoppingListItem is a class - check
+// ShoppingListItem has a property named name - check
+// ShoppingListItem has a property named description - check
+// ShoppingListItem has a property named is_done - check
 // ShoppingListItem has a constructor method that accepts 2 arguments, name and description
-// the constructor method sets the new instances name and description properties using the arguments passed in
+// the constructor method sets the new instances name and description properties using the arguments passed in- check
 // ShoppingListItem has a method named check
 // calling the instance's check method will set it's is_done property to true
 // ShoppingListItem has a method named uncheck
@@ -57,6 +57,29 @@ describe('shoppingListItem', function(){
     expect(shopping_list_item.description).to.equal("high res");  
   });
 
+   it('should have a method called check', function(){
+    expect(shopping_list_item.check).to.be.a('function');
+   });
+
+   it('should set method check to true', function(){
+    shopping_list_item.check();
+    expect(shopping_list_item.is_done).to.deep.equal(true);
+   });
+
+
+   it('should have a method called uncheck', function(){
+    expect(shopping_list_item.uncheck).to.be.a('function');
+   });
+
+   it("uncheck should change the boolean value from true to false", function() {
+       shopping_list_item.uncheck();
+       expect(shopping_list_item.is_done).to.deep.equal(false);
+   });
+
+   it('should render shopping list', function(){
+    // render method
+   });
+
 });
 
 
@@ -79,23 +102,23 @@ describe('shoppingListItem', function(){
 
 
 // shopping list
-beforeEach(function(){
 
+describe('ShoppingList', function() {
+  beforeEach(function(){
   //object
-  shopping_list = new ShoppingList;//function
-});
+    shopping_list = new ShoppingList;//function
+  });
 
-describe('shoppingList', function() {
   it('should be a class', function() {
-    expect(shopping_list).to.be.a("function");
+    expect(shopping_alist).to.be.a("function");
   });
 
   it('should have a property of name', function(){
-    expect(shopping_list).to.have.property("items");
+    expect(ShoppingList).to.have.property("items");
   });
 
   it('should initialize items as empty array', function(){
-    expect(shopping_list, "items").to.be.a('array');
+    expect(ShoppingList, "items").to.be.a('array');
   });
 
   it('should have a property of addItem', function(){

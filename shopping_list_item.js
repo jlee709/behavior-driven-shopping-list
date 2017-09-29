@@ -5,12 +5,11 @@ console.log("shopping list item linked ");
 // - ShoppingListItem has a property named `name`
 // - ShoppingListItem has a property named `description`
 // - ShoppingListItem has a property named `is_done`
-
 // - ShoppingListItem has a constructor method that accepts 
 // 2 arguments, `name` and `description`
-
 // - the constructor method sets the new instances `name`
 //  and `description` properties using the arguments passed in
+
 // - ShoppingListItem has a method named `check`
 //   -  calling the instance's `check` method will set it's `is_done` property to true
 // - ShoppingListItem has a method named `uncheck`
@@ -21,8 +20,22 @@ console.log("shopping list item linked ");
 
 // hint: Use ES6 [string templates](http://tc39wiki.calculist.org/es6/template-strings/) for your render method
 
-function ShoppingListItem(name, description) {
+class ShoppingListItem{
+constructor(name, description) {
   this.name = name;
   this.description = description;
   this.is_done = false;
 }
+  check(){
+    this.is_done = true;
+  }
+
+  uncheck(){
+    this.is_done = false;
+  }
+
+  render(string){
+    string =+ '<li>string</li>';
+  }
+}
+
